@@ -18,10 +18,10 @@ const customConfig = defineConfig({
         _dark: "#F2F2F2",
         _light: "#262626",
       },
-      fontFamily: "Inter",
+      fontFamily: "Inter, sans-serif", 
       fontWeight: ["100", "900"],
       fontStyle: "normal",
-    },
+      },
 
   },
   theme: {
