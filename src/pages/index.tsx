@@ -21,6 +21,10 @@ import PopoverInfo from "@/components/PopoverInfo";
 import ModalInfoProject from "@/components/ModalInfoProject/Index";
 
 export default function Home() {
+  const handleLinkClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <Box>
       <Header />
@@ -44,12 +48,16 @@ export default function Home() {
             Desenvolvedor Front-end
           </Text>
           <Flex gap="7px" alignItems="center" fontWeight="400" fontSize="xl">
-            <Box display={{base: "column", md: "flex"}} fontWeight="400" fontSize="xl">
+            <Box
+              display={{ base: "column", md: "flex" }}
+              fontWeight="400"
+              fontSize="xl"
+            >
               {" "}
               Sigo o fluxo de
               <Text
                 display="flex"
-                ml={{base: "0px", md: "7px"}}
+                ml={{ base: "0px", md: "7px" }}
                 gap="7px"
                 color="red"
                 bgClip="text"
@@ -76,7 +84,11 @@ export default function Home() {
             </Heading>
             <PopoverInfo />
           </Box>
-          <Grid templateColumns={{md: "repeat(1,1fr)", lg: "repeat(2,1fr)"}} gap="1rem" mt="6" >
+          <Grid
+            templateColumns={{ md: "repeat(1,1fr)", lg: "repeat(2,1fr)" }}
+            gap="1rem"
+            mt="6"
+          >
             {projects.map((project) => (
               <ModalInfoProject project={project}>
                 <GridItem
@@ -101,26 +113,28 @@ export default function Home() {
                     <Text fontSize="xl" fontWeight="bold">
                       {project.name}
                     </Text>
-                    <Link href={project.github}>
+                    <Link href={project.github} onClick={handleLinkClick}>
                       <FaGithub />
                     </Link>
-                    <Link href={project.github}>
+                    <Link href={project.github} onClick={handleLinkClick}>
                       <PiLinkSimpleBold />
                     </Link>
                   </Flex>
                   <Flex as="ul" w="74px" mt={2}>
-                    <li>
-                      <Text
-                        textTransform="uppercase"
-                        fontSize="xs"
-                        fontWeight="bold"
-                        p="0 3px 0 3px"
-                        bg="blue.100"
-                        color="blue.500"
-                      >
-                        {project.stack}
-                      </Text>
-                    </li>
+                    <Flex as="li" gap="2">
+                      {project.stack.map((stack) => (
+                        <Text
+                          textTransform="uppercase"
+                          fontSize="xs"
+                          fontWeight="bold"
+                          p="0 3px 0 3px"
+                          bg="blue.100"
+                          color="blue.500"
+                        >
+                          {stack.toString()}
+                        </Text>
+                      ))}
+                    </Flex>
                   </Flex>
                   <Text mt={2} fontSize="xl">
                     {project.description}
@@ -141,7 +155,6 @@ export default function Home() {
         }}
         alignItems="center"
         direction="column"
-       
       >
         <Text textAlign="center" mt="4">
           Vamos nos manter conectado <br />

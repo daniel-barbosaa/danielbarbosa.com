@@ -50,8 +50,8 @@ export default function ModalInfoProject({
                 <Image
                   src={imageStacks.linguage}
                   alt="linguagem"
-                  width={20}
-                  height={20}
+                  width={15}
+                  height={15}
                 />
                 <Text textTransform="capitalize" fontSize="md">
                   <strong>Linguagem: </strong>
@@ -62,8 +62,8 @@ export default function ModalInfoProject({
                 <Image
                   src={imageStacks.framework}
                   alt="framework"
-                  width={20}
-                  height={20}
+                  width={15}
+                  height={15}
                 />
                 <Text textTransform="capitalize" fontSize="md">
                   <strong>Framework: </strong>
@@ -75,8 +75,8 @@ export default function ModalInfoProject({
                   <Image
                     src={imageStacks.lib}
                     alt="biblioteca"
-                    width={20}
-                    height={20}
+                    width={15}
+                    height={15}
                   />
                   <Text textTransform="capitalize" fontSize="md">
                     <strong>Biblioteca: </strong>
@@ -89,8 +89,8 @@ export default function ModalInfoProject({
                   <Image
                     src={imageStacks.database}
                     alt="banco de dados"
-                    width={20}
-                    height={20}
+                    width={15}
+                    height={15}
                   />
                   <Text textTransform="capitalize" fontSize="md">
                     <strong>Banco de dados: </strong>
@@ -101,7 +101,7 @@ export default function ModalInfoProject({
             </Flex>
           </DialogDescription>
         </DialogBody>
-        <DialogCloseTrigger top="0" insetEnd="-12" bg="bg" color="blue.500" />
+        <DialogCloseTrigger top="7px" right="7px"  bg="bg" color="blue.500" />
       </DialogContent>
     </DialogRoot>
   );

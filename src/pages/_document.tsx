@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Bicon from '../../public/d.png'
 
 export default function Document() {
   return (
@@ -10,6 +11,8 @@ export default function Document() {
         as="font"
         type="font/woff2"
       />
+      <title>Daniel Barbosa</title>
+      <link rel="icon" href="/d.png" />
       <body>
         <Main />
         <NextScript />
