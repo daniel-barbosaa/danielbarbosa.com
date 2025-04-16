@@ -27,7 +27,6 @@ const customConfig = defineConfig({
   theme: {
     tokens: {
       colors,
-
     },
   },
   

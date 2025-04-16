@@ -116,7 +116,10 @@ export default function Home() {
                     <Link href={project.github} onClick={handleLinkClick}>
                       <FaGithub />
                     </Link>
-                    <Link href={project.github} onClick={handleLinkClick}>
+                    <Link
+                      href={project?.link || project.github}
+                      onClick={handleLinkClick}
+                    >
                       <PiLinkSimpleBold />
                     </Link>
                   </Flex>
