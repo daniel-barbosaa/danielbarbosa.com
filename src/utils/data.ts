@@ -45,7 +45,7 @@ export const projects = [
     libraries: "styled-components",
     database: "PostgreSQL",
     image: MyContactsImg,
-    github: "https://github.com/daniel-barbosaa/ig-news",
+    github: "https://github.com/daniel-barbosaa/mycontactsfe",
     link: "https://mycontactsfe-qncd.vercel.app",
   },
   {
