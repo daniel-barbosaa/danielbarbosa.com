@@ -25,14 +25,15 @@ export const projects = [
     id: 2,
     name: "IgNews",
     description:
-      "Blog - Receba as melhores notícias sobre React por um preço muito acessível.",
+      "Blog com conteúdo exclusivo sobre React + sistema de assinatura (modo teste).",
     stack: ["frontend", "backend"],
     linguage: "typescript",
     framework: "Next.js, React.js",
     libraries: "Chakra UI",
-    database: "FaunaDB, Prismic",
+    database: "FaunaDB, Prismic, Stripe",
     image: IgnewsImg,
     github: "https://github.com/daniel-barbosaa/ig-news",
+    link: "https://ig-news-red.vercel.app",
   },
   {
     id: 3,
