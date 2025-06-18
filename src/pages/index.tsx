@@ -2,19 +2,19 @@ import Image from "next/image";
 
 import arrowRight from "../../public/Double Up.svg";
 import Rocket from "../../public/Rocket.svg";
-import Info from "../../public/Info.svg";
+
 import { projects } from "@/utils/data";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import Link from "next/link";
 import {
   Box,
-  Button,
   Flex,
   Grid,
   GridItem,
   Heading,
   Text,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import Header from "@/components/Header/Index";
 import PopoverInfo from "@/components/PopoverInfo";
@@ -44,9 +44,22 @@ export default function Home() {
             <br />
             Eu sou Daniel Barbosa
           </Heading>
+
           <Text fontWeight="400" fontSize="xl">
-            Desenvolvedor Front-end
+            Desenvolvedor Front-end na{" "}
+            <ChakraLink
+              href="https://www.linkedin.com/company/ipecode/"
+              textDecoration="underline"
+              bgClip="text"
+              bgGradient="to-r"
+              gradientFrom="blue.400"
+              gradientVia="blue.500"
+              gradientTo="blue.300"
+            >
+              ipêCode
+            </ChakraLink>
           </Text>
+
           <Flex gap="7px" alignItems="center" fontWeight="400" fontSize="xl">
             <Box
               display={{ base: "column", md: "flex" }}
@@ -169,7 +182,7 @@ export default function Home() {
             {" "}
             <FaLinkedin />
           </Link>
-          <Link href="https://www.linkedin.com/in/daniel-barbos/">
+          <Link href="https://github.com/daniel-barbosaa">
             {" "}
             <FaGithub />
           </Link>
