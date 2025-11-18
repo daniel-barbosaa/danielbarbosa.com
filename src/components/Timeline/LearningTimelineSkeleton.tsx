@@ -1,4 +1,4 @@
-import { Box, HStack, Skeleton, Stack, Text, Timeline } from "@chakra-ui/react";
+import { Box, Text, Timeline } from "@chakra-ui/react";
 import { SkeletonTimeline } from "./SkeletonTimeline";
 
 export function LearningTimelineSkeleton() {

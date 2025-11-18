@@ -16,25 +16,21 @@ export async function fetchTimeline(
   perPage: number,
   filter?: string
 ): Promise<TimelineJournalResponse> {
-  const response: LearningJournal[] = await fetch("api/timeline").then((res) =>
-    res.json()
-  );
+  const response = await fetch("/api/timeline").then((res) => res.json());
+
+  const list: LearningJournal[] = Array.isArray(response) ? response : [];
 
   const start = page * perPage;
   const end = start + perPage;
 
-  if (filter) {
-    const filtered = response.filter((event) =>
-      event.title.toLowerCase().includes(filter?.toLowerCase())
-    );
-    return {
-      items: filtered.slice(start, end),
-      hasMore: end < filtered.length,
-    };
-  }
+  const filteredList = filter
+    ? list.filter((event) =>
+        event.title.toLowerCase().includes(filter.toLowerCase())
+      )
+    : list;
 
   return {
-    items: response.slice(start, end),
-    hasMore: end < response.length,
+    items: filteredList.slice(start, end),
+    hasMore: end < filteredList.length,
   };
 }
