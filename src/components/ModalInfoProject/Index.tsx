@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import { imageStacks } from "../../utils/data";
@@ -101,7 +101,7 @@ export default function ModalInfoProject({
             </Flex>
           </DialogDescription>
         </DialogBody>
-        <DialogCloseTrigger top="7px" right="7px"  bg="bg" color="blue.500" />
+        <DialogCloseTrigger top="7px" right="7px" bg="bg" color="blue.500" />
       </DialogContent>
     </DialogRoot>
   );
