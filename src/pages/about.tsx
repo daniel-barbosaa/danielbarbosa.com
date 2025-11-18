@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 import Man from "../../public/man.svg";
 import Camera from "../../public/Camera.svg";
 import Music from "../../public/Music.svg";
@@ -15,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 import Moc from "../../public/moc.jpg";
-import { Layout } from "./layout";
+import Layout from "./layout";
 
 export default function About() {
   return (

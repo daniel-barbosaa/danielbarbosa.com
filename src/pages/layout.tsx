@@ -1,13 +1,13 @@
 import { Footer } from "@/components/Footer";
 import Header from "@/components/Header/Index";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <Flex direction="column" minH="100vh">
       <Header />

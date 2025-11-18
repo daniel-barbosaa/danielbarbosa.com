@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-import { Layout } from "./layout";
+import Layout from "./layout";
 
 import { CiViewTimeline } from "react-icons/ci";
 import Button from "@/components/Button";

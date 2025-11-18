@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import PopoverInfo from "@/components/PopoverInfo";
 import ModalInfoProject from "@/components/ModalInfoProject/Index";
-import { Layout } from "./layout";
+import Layout from "./layout";
 
 export default function Home() {
   const handleLinkClick = (e: React.MouseEvent) => {
