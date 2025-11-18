@@ -3,7 +3,7 @@ import {
   MenuItem,
   MenuRoot,
   MenuTrigger,
-} from "@/components/ui/menu";
+} from "../../components/ui/menu";
 import { Button, Text } from "@chakra-ui/react";
 import Menu from "../../../public/Menu.svg";
 import Close from "../../../public/Close.svg";
@@ -29,14 +29,19 @@ export default function NavMenu() {
         </Button>
       </MenuTrigger>
       <MenuContent p="2">
-        <MenuItem value="new-txt">
+        <MenuItem value="home">
           <ActiveLink href="/">
             <Text>Home</Text>
           </ActiveLink>
         </MenuItem>
-        <MenuItem value="new-file">
+        <MenuItem value="about">
           <ActiveLink href="/about">
             <Text>About</Text>
+          </ActiveLink>
+        </MenuItem>
+        <MenuItem value="learning">
+          <ActiveLink href="/learning">
+            <Text>Aprendizado</Text>
           </ActiveLink>
         </MenuItem>
       </MenuContent>

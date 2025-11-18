@@ -7,7 +7,6 @@ export const colors = {
     },
     white: {
         300: {value: "#ffffff"},
-        
     }
     
 }

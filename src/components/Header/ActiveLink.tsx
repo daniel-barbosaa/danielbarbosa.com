@@ -1,4 +1,5 @@
-import { Box } from "@chakra-ui/react";
+"use client";
+
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 import { cloneElement, ReactElement } from "react";
@@ -22,7 +23,7 @@ export default function ActiveLink({ children, ...rest }: ActiveLinkProps) {
         style: {
           color: isActive ? "rgb(58, 132, 255)" : "none",
           background: "transparent",
-          fontWeight: isActive ? "bold" : "normal"
+          fontWeight: isActive ? "bold" : "normal",
         },
       })}
     </Link>

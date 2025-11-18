@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Bicon from '../../public/d.png'
 
 export default function Document() {
   return (

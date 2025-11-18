@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { createContext, ReactNode, useContext, useEffect } from "react";
 import { UseDisclosureReturn, useDisclosure } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 

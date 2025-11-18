@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import Image from "next/image";
 import { ColorModeButton } from "../ui/color-mode";
@@ -9,7 +10,7 @@ export default function Header() {
   const isWideVersion = useBreakpointValue({
     base: false,
     md: true,
-    large: true
+    large: true,
   });
   return (
     <Box
@@ -45,7 +46,10 @@ export default function Header() {
               <li>Home</li>
             </ActiveLink>
             <ActiveLink href="/about">
-              <li>About</li>
+              <li>Sobre</li>
+            </ActiveLink>
+            <ActiveLink href="/learning">
+              <li>Aprendizado</li>
             </ActiveLink>
           </Box>
         )}

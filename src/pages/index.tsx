@@ -15,10 +15,11 @@ import {
   Heading,
   Text,
   Link as ChakraLink,
+  Badge,
 } from "@chakra-ui/react";
-import Header from "@/components/Header/Index";
 import PopoverInfo from "@/components/PopoverInfo";
 import ModalInfoProject from "@/components/ModalInfoProject/Index";
+import { Layout } from "./layout";
 
 export default function Home() {
   const handleLinkClick = (e: React.MouseEvent) => {
@@ -26,8 +27,7 @@ export default function Home() {
   };
 
   return (
-    <Box>
-      <Header />
+    <Layout>
       <Box
         as="main"
         w="100%"
@@ -66,7 +66,6 @@ export default function Home() {
               fontWeight="400"
               fontSize="xl"
             >
-              {" "}
               Sigo o fluxo de
               <Text
                 display="flex"
@@ -79,7 +78,7 @@ export default function Home() {
                 gradientVia="blue.500"
                 gradientTo="blue.300"
               >
-                aprender{" "}
+                aprender
                 <Image width={12} height={12} src={arrowRight} alt="seta" />
                 criar
                 <Image width={12} height={12} src={arrowRight} alt="seta" />
@@ -106,88 +105,62 @@ export default function Home() {
               <ModalInfoProject project={project}>
                 <GridItem
                   borderRadius="6px"
-                  padding="20px"
                   border={{
                     base: "1px solid rgba(255, 255, 255, 0.16)",
                     _light: "1px solid #C5CFDC",
                   }}
                   lineHeight="inherit"
                 >
-                  <Flex justify="center">
-                    <Box as="span" w="202px">
-                      <Image
-                        src={project.image}
-                        alt="imagem do projeto"
-                        quality={100}
-                      />
-                    </Box>
-                  </Flex>
-                  <Flex mt={3.5} align="center" gap={2}>
-                    <Text fontSize="xl" fontWeight="bold">
-                      {project.name}
-                    </Text>
-                    <Link href={project.github} onClick={handleLinkClick}>
-                      <FaGithub />
-                    </Link>
-                    <Link
-                      href={project?.link || project.github}
-                      onClick={handleLinkClick}
-                    >
-                      <PiLinkSimpleBold />
-                    </Link>
-                  </Flex>
-                  <Flex as="ul" w="74px" mt={2}>
-                    <Flex as="li" gap="2">
+                  <Box>
+                    <Image
+                      src={project.image}
+                      alt="imagem do projeto"
+                      quality={100}
+                      style={{
+                        borderRadius: "6px 6px 0px 0px",
+                      }}
+                    />
+                  </Box>
+
+                  <Box padding="6">
+                    <Flex align="center" gap={2}>
+                      <Text fontSize="xl" fontWeight="bold">
+                        {project.name}
+                      </Text>
+                      <Link href={project.github} onClick={handleLinkClick}>
+                        <FaGithub />
+                      </Link>
+                      <Link
+                        href={project?.link || project.github}
+                        onClick={handleLinkClick}
+                      >
+                        <PiLinkSimpleBold />
+                      </Link>
+                    </Flex>
+
+                    <Box mt="1" gap="1" display="flex">
                       {project.stack.map((stack) => (
-                        <Text
-                          textTransform="uppercase"
-                          fontSize="xs"
-                          fontWeight="bold"
-                          p="0 3px 0 3px"
-                          bg="blue.100"
-                          color="blue.500"
+                        <Badge
+                          size="sm"
+                          variant="subtle"
+                          colorPalette="blue"
+                          textTransform="capitalize"
                         >
                           {stack.toString()}
-                        </Text>
+                        </Badge>
                       ))}
-                    </Flex>
-                  </Flex>
-                  <Text mt={2} fontSize="xl">
-                    {project.description}
-                  </Text>
+                    </Box>
+
+                    <Text mt={2} fontSize="xl">
+                      {project.description}
+                    </Text>
+                  </Box>
                 </GridItem>
               </ModalInfoProject>
             ))}
           </Grid>
         </Box>
       </Box>
-      <Flex
-        mt="8"
-        as="footer"
-        width="100%"
-        borderTop={{
-          base: "1px solid rgba(255, 255, 255, 0.16)",
-          _light: "1px solid #C5CFDC",
-        }}
-        alignItems="center"
-        direction="column"
-      >
-        <Text textAlign="center" mt="4">
-          Vamos nos manter conectado <br />
-          Siga-me
-        </Text>
-
-        <Flex mt={3.5} align="center" gap={2} mb={3}>
-          <Link href="https://www.linkedin.com/in/daniel-barbos/">
-            {" "}
-            <FaLinkedin />
-          </Link>
-          <Link href="https://github.com/daniel-barbosaa">
-            {" "}
-            <FaGithub />
-          </Link>
-        </Flex>
-      </Flex>
-    </Box>
+    </Layout>
   );
 }
