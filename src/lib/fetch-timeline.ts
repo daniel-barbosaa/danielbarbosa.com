@@ -16,7 +16,9 @@ export async function fetchTimeline(
   perPage: number,
   filter?: string
 ): Promise<TimelineJournalResponse> {
-  const response = await fetch("/api/timeline").then((res) => res.json());
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/timeline`
+  ).then((res) => res.json());
 
   const list: LearningJournal[] = Array.isArray(response) ? response : [];
 
