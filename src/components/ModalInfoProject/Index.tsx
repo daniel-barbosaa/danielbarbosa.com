@@ -20,7 +20,7 @@ interface Project {
   linguage: string;
   framework: string;
   libraries: string;
-  database: string;
+  database?: string;
   image: StaticImageData;
   github: string;
 }
@@ -71,7 +71,7 @@ export default function ModalInfoProject({
                 </Text>
               </Flex>
               {project?.libraries && (
-                <Flex as="li" gap={2}>
+                <Flex as="li" gap={2} align="center">
                   <Image
                     src={imageStacks.lib}
                     alt="biblioteca"
@@ -85,13 +85,8 @@ export default function ModalInfoProject({
                 </Flex>
               )}
               {project?.database && (
-                <Flex as="li" gap={2}>
-                  <Image
-                    src={imageStacks.database}
-                    alt="banco de dados"
-                    width={15}
-                    height={15}
-                  />
+                <Flex as="li" gap={2} align="center">
+                  <Image src={imageStacks.database} alt="banco de dados" />
                   <Text textTransform="capitalize" fontSize="md">
                     <strong>Banco de dados: </strong>
                     {project.database}

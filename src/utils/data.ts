@@ -1,7 +1,6 @@
-import TaskflowImg from "../../public/dashboard-image.png";
-import IgnewsImg from "../../public/ignews.png";
-import DashgoImg from "../../public/dashgo.png";
-import MyContactsImg from "../../public/mycontacts.png";
+import AbnmoImg from "../../public/abnmo.svg";
+import IgnewsImg from "../../public/ignews.svg";
+import FincheckImg from "../../public/fincheck.svg";
 import DatabaseIcon from "../../public/database.svg";
 import LinguageIcon from "../../public/linguage.svg";
 import FrameworkIcon from "../../public/framework.svg";
@@ -10,16 +9,15 @@ import LibIcon from "../../public/lib.svg";
 export const projects = [
   {
     id: 1,
-    name: "taskFlow",
+    name: "Sistema Viver Melhor da ABNMO",
     description:
-      "Crie e gerencie seus projetos de forma rápida e adicione tarefas relacionadas.",
-    stack: ["frontend", "backend"],
+      "Sistema de gerenciamento e acompanhamento de pacientes da ABNMO.",
+    stack: ["frontend"],
     linguage: "typescript",
-    framework: "Next.js, React.js",
-    libraries: "Chakra UI, recharts, testing-library",
-    database: "Firebase",
-    image: TaskflowImg,
-    github: "https://github.com/daniel-barbosaa/taskflow",
+    framework: "Next 15, React",
+    libraries: "Tailwind CSS, RadixUI",
+    image: AbnmoImg,
+    github: "https://github.com/ipecode-br/abnmo-frontend",
   },
   {
     id: 2,
@@ -37,30 +35,17 @@ export const projects = [
   },
   {
     id: 3,
-    name: "MyContacts",
+    name: "Fincheck",
     description:
-      "MyContacts é um gerenciador de contatos que permite cadastrar, editar, excluir e pesquisar contatos de forma prática e rápida.",
+      "Aplicativo de controle de finaças 360° permitindo o controle total sobre contas bancárias, investimentos, despesas, receitas e planejamento financeiro.",
     stack: ["frontend", "backend"],
-    linguage: "Javascript",
-    framework: "React.js, Node.js e Express",
-    libraries: "styled-components",
-    database: "PostgreSQL",
-    image: MyContactsImg,
-    github: "https://github.com/daniel-barbosaa/mycontactsfe",
-    link: "https://mycontactsfe-qncd.vercel.app",
-  },
-  {
-    id: 4,
-    name: "Dashgo.",
-    description:
-      "Dahsgo é um painel simples e intuitivo para gerenciamento de usuários, permitindo organizar, monitorar e administrar dados com eficiência.",
-    stack: ["frontend"],
-    linguage: "typescript",
-    framework: "Next.js, React.js",
-    libraries: "Chakra UI, APEXCHARTS.JS",
-    database: "Miraje.js (fake)",
-    image: DashgoImg,
-    github: "https://github.com/daniel-barbosaa/dashgo",
+    linguage: "Typescript",
+    framework: "React, NestJs",
+    libraries: "Radix UI, Tailwind CSS",
+    database: "PostgreSQL, PrimsaORM",
+    image: FincheckImg,
+    github: "https://github.com/daniel-barbosaa/fincheck-frontend",
+    link: "https://github.com/daniel-barbosaa/fincheck-frontend",
   },
 ];
 
